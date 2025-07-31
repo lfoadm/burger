@@ -42,9 +42,35 @@ function addToCart(name, price) {
     
     if (existingItem) {
         existingItem.quantity += 1;
+        
+        Toastify({
+        text: `+1 ${name} adicionado ao carrinho.`,
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #E6C30E, #E6A90E)",
+        },
+        }).showToast();
+
         return;
     } else{
         cart.push({ name, price, quantity: 1 });
+        
+        Toastify({
+        text: `${name} adicionado ao carrinho.`,
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #E6C30E, #E6A90E)",
+        },
+        }).showToast();
+
     }
     updateCartModal()
 }
@@ -194,7 +220,7 @@ function checkRestaurantOpen() {
     const currentDay = new Date().getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
 
     // Horário de funcionamento: Segunda a Sexta, das 11h às 22h
-    if (currentDay >= 0 && currentDay <= 6 && currentHour >= 11 && currentHour < 23) {
+    if (currentDay >= 0 && currentDay <= 6 && currentHour >= 11 && currentHour < 23,5) {
         return true;
     }
     return false;
