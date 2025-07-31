@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Cardápio-Lele</title>
+</head>
+<body>
+    
+    <!-- Header -->
+     <header class="w-full h-[360px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col items-center justify-center">
+            <img src="./assets/img/marmita1.jpg" alt="Logo Cardapio" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 transition-all duration-200">
+            <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Marmita Marmota</h1>
+            <span class="text-white font-medium">Rua Tal, 333 - Iturama / MG</span>
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-4"  id="date-span">
+                <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Menu -->
+     <h3 class="text-xl md:text-3xl text-center mt-6 font-bold text-zinc-900">
+        Conheça nosso menu
+    </h3>
+
+    <div id="menu" class="mt-3">
+        <main class="grid grid-cols-1 gap-6 md:gap-6 md:grid-cols-2 max-w-7xl mx-auto px-4 mt-6">
+            <!-- Product item menu 1 -->
+             <div class="flex gap-6 items-center bg-white shadow-lg rounded-lg p-4 mt-6">
+                <img
+                    src="./assets/img/marmita1.jpg"
+                    alt="Marmita 1"
+                    class="w-28 h-28 object-cover rounded-lg hover:scale-110 hover:rotate-2 duration-200"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Marmita do chefe</p>
+                    <p class="text-sm">Arroz, feijão, purê de batata, filé suíno, salada de ervilhas e legumes</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <p class="font-bold text-lg">R$ 18.99</p>
+                        <button
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Marmita do chefe"
+                            data-price="18.99"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+             </div>
+            <!-- End Product item menu -->
+            <!-- Product item menu 2 -->
+            <div class="flex gap-6 items-center bg-white shadow-lg rounded-lg p-4 mt-6">
+                <img
+                    src="./assets/img/marmita2.jpg"
+                    alt="Combo Marmita"
+                    class="w-28 h-28 object-cover rounded-lg hover:scale-110 hover:rotate-2 duration-200"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Combo Marmita</p>
+                    <p class="text-sm">Arroz, feijão, purê de batata, filé suíno, salada de ervilhas e legumes</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <p class="font-bold text-lg">R$ 59.90</p>
+                        <button
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Combo Marmita"
+                            data-price="59.90"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            <!-- End Product item menu -->
+            <!-- Product item menu 3 -->
+            <div class="flex gap-6 items-center bg-white shadow-lg rounded-lg p-4 mt-6">
+                <img
+                    src="./assets/img/marmita3.jpg"
+                    alt="Marmita fitness"
+                    class="w-28 h-28 object-cover rounded-lg hover:scale-110 hover:rotate-2 duration-200"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Marmita fitness</p>
+                    <p class="text-sm">Arroz, feijão, purê de batata, filé suíno, salada de ervilhas e legumes</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <p class="font-bold text-lg">R$ 9.90</p>
+                        <button
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Marmita fitness"
+                            data-price="9.90"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+                </div>
+            <!-- End Product item menu -->
+            <!-- Product item menu 4 -->
+            <div class="flex gap-6 items-center bg-white shadow-lg rounded-lg p-4 mt-6">
+                <img
+                    src="./assets/img/marmita4.jpg"
+                    alt="Marmita massas"
+                    class="w-28 h-28 object-cover rounded-lg hover:scale-110 hover:rotate-2 duration-200"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Marmita massas</p>
+                    <p class="text-sm">Arroz, Macarrão</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <p class="font-bold text-lg">R$ 12.50</p>
+                        <button
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Marmita massas"
+                            data-price="12.50"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Product item menu -->
+        </main>
+
+        <div class="mx-auto max-x-7xl px-2 my-6">
+            <h2 class="font-bold text-3xl text-center">
+                Bebidas
+            </h2>
+        </div>
+
+        <!-- Grid bebidas -->
+         <div class="grid grid-cols-1 gap-6 md:gap-6 md:grid-cols-2 max-w-7xl mx-auto px-4 mt-3 my-10" id="menu">
+            <!-- Bebida item 1 -->
+                <div class="flex gap-6 items-center bg-white shadow-lg rounded-lg p-4 mt-6">
+                <img
+                    src="./assets/img/coca.jpg"
+                    alt="Coca-cola lata"
+                    class="w-28 h-28 object-cover rounded-lg hover:scale-110 hover:rotate-2 duration-200"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Coca Cola lata</p>
+                    <p class="text-sm">350 ml</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <p class="font-bold text-lg">R$ 5</p>
+                        <button
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Coca Cola lata"
+                            data-price="5"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- End bebida item 1 -->
+            <!-- Bebida item 2 -->
+                <div class="flex gap-6 items-center bg-white shadow-lg rounded-lg p-4 mt-6">
+                <img
+                    src="./assets/img/guarana.png"
+                    alt="Guaraná lata"
+                    class="w-28 h-28 object-cover rounded-lg hover:scale-110 hover:rotate-2 duration-200"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Guaraná lata</p>
+                    <p class="text-sm">350 ml</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <p class="font-bold text-lg">R$ 5</p>
+                        <button
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Guaraná lata"
+                            data-price="5"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- End bebida item 2 -->
+
+            <!-- Bebida item 3 -->
+                <div class="flex gap-6 items-center bg-white shadow-lg rounded-lg p-4 mt-6">
+                <img
+                    src="./assets/img/sprite.png"
+                    alt="Sprite lata"
+                    class="w-28 h-28 object-cover rounded-lg hover:scale-110 hover:rotate-2 duration-200"
+                />
+                <div class="w-full">
+                    <p class="font-bold">Sprite lata</p>
+                    <p class="text-sm">350 ml</p>
+                    <div class="flex items-center justify-between mt-5">
+                        <p class="font-bold text-lg">R$ 5</p>
+                        <button
+                            class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                            data-name="Sprite lata"
+                            data-price="5"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- End bebida item 3 -->
+         </div>
+        <!-- End Grid bebidas -->
+    </div>
+    <!-- End Menu -->
+
+    <!-- Modal cart -->
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between flex-col"></div>
+            <hr class="border-a border-gray-300 mb-2">
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input
+                type="text"
+                placeholder="Digite seu endereço completo..."
+                id="address"
+                class="w-full border-2 p-1 rounded my-1"
+            />
+            <p class="text-red-600 hidden" id="address-warn">Informe seu endereço completo!</p>
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn" class="bg-red-400 text-white px-4 py-1 rounded hover:bg-red-800 transition-all duration-200">
+                    Fechar
+                </button>
+                <button id="checkout-btn" class="bg-green-600 text-white px-4 py-1 rounded">
+                    Finalizar pedido
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modal cart -->
+
+    
+
+    <!-- Footer -->
+     <!-- <footer class="w-full bg-red-600 py-3 fixed bottom-0 z-40 text-white flex items-center justify-center">
+        <button 
+            class="flex items-center justify-center gap-2 px-4 py-2 rounded hover:bg-red-800 transition-all duration-200"
+            id="cart-btn"
+        >
+            (<span id="cart-count" class="text-white font-bold">0</span>)
+            Ver carrinho
+            <i class="fa fa-shopping-cart text-white ml-2"></i>
+        </button>
+     </footer> -->
+    <!-- End Footer -->
+
+    <!-- Footer -->
+<footer class="w-full bg-red-600 py-3 fixed bottom-0 z-40 text-white flex items-center justify-center">
+    <button 
+        class="flex items-center justify-center gap-2 px-4 py-2 rounded hover:bg-red-800 transition-all duration-200"
+        id="cart-btn"
+    >
+        Ver carrinho
+        <div class="relative">
+            <i class="fa fa-shopping-cart text-white text-xl ml-2">
+                <span 
+                id="cart-count"
+                class="hidden absolute -top-1 -right-1 bg-yellow-300 text-red-600 text-xs font-bold rounded-full w-5 h-5 items-center justify-center"
+            >
+                
+            </span>
+            </i>
+            
+        </div>
+    </button>
+</footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
