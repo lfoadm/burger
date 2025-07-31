@@ -183,7 +183,7 @@ function checkRestaurantOpen() {
     const currentDay = new Date().getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
 
     // Horário de funcionamento: Segunda a Sexta, das 11h às 22h
-    if (currentDay >= 0 && currentDay <= 6 && currentHour >= 11 && currentHour < 21) {
+    if (currentDay >= 0 && currentDay <= 6 && currentHour >= 11 && currentHour < 23) {
         return true;
     }
     return false;
