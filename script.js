@@ -144,7 +144,18 @@ checkoutBtn.addEventListener('click', function() {
     }
     if(cart.length === 0) return;
     if(addressInput.value === '') {
-        addressWarn.classList.remove('hidden');
+        Toastify({
+        text: "Informe seu endereço completo!",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(to right, #ef4444, #j1j15)",
+        },
+        }).showToast();
+
         addressInput.classList.add('border-red-500');
         return;
     }
