@@ -54,7 +54,7 @@ function addToCart(name, price) {
             background: "linear-gradient(to right, #E6C30E, #E6A90E)",
         },
         }).showToast();
-
+        updateCartModal()
         return;
     } else{
         cart.push({ name, price, quantity: 1 });
@@ -106,12 +106,23 @@ function updateCartModal() {
         currency: 'BRL'
     });
 
-    if (cart.length > 0) {
+    // if (cart.length > 0) {
+    //     cartCounter.classList.remove('hidden');
+    //     cartCounter.textContent = cart.length;
+    // } else {
+    //     cartCounter.classList.add('hidden');
+    // }
+
+    const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+    console.log(totalQuantity);
+    if (totalQuantity > 0) {
         cartCounter.classList.remove('hidden');
-        cartCounter.textContent = cart.length;
+        cartCounter.textContent = totalQuantity;
     } else {
         cartCounter.classList.add('hidden');
-    }    
+    }
+
 }
 
 // Evento para remover item do carrinho
